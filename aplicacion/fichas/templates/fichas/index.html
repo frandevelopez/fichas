@@ -1,0 +1,9 @@
+{% if latest_client_list %}
+    <ul>
+    {% for c in latest_client_list %}
+        <li><a href="/fichas/{{ client.id }}/">{{ c.client_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No clients are available.</p>
+{% endif %}
