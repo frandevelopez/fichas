@@ -1,0 +1,10 @@
+<h1>{{ client.client_name }}</h1>
+<ul>
+
+	{% if fichas %}
+		{% for f in fichas %}
+	 		<li>{{ f.style_name }}: {{ f.style_price }}€</li>
+	 	{% endfor %}
+	{% else %} <h6>No fichas in this client<h6>
+	{% endif %}
+</ul>
