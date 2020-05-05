@@ -1,7 +1,7 @@
-<h1>{{ client.client_name }}</h1>
+<h1>{{ client.name }}</h1>
 <ul>
-	{% if fichas %}
-		{% for f in fichas %}
+	{% if client.ficha_set %}
+		{% for f in client.ficha_set.all %}
 	 		<li>{{ f.name }}: {{ f.price }}€</li>
 	 	{% endfor %}
 	{% else %} <h6>No fichas in this client<h6>

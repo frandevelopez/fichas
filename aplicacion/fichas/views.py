@@ -12,6 +12,5 @@ def index(request):
 
 def client_detail(request, client_id):
 	client = get_object_or_404(Client, pk=client_id)
-	fichas = get_list_or_404(Ficha, client=client_id)
-	return render(request,'fichas/client_detail.html',{'client':client, 'fichas':fichas})
+	return render(request,'fichas/client_detail.html',{'client':client})
 
