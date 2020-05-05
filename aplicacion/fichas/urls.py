@@ -4,5 +4,6 @@ from . import views
 app_name = 'fichas'
 urlpatterns = [
 	path('',views.index),
-	path('<int:client_id>/', views.client_detail, name='client_detail'),
+	path('client/<int:client_id>/', views.client_detail, name='client_detail'),
+	path('ficha/<int:ficha_id>/', views.ficha_detail, name='ficha_detail'),
 ]

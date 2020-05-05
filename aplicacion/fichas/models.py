@@ -23,7 +23,7 @@ class Ficha(models.Model):
 	price = models.DecimalField(max_digits=5,default=0, decimal_places=2)
 	upper = models.ForeignKey('Leather',on_delete=models.CASCADE,default=None)
 	lining = models.ForeignKey('Lining',on_delete=models.CASCADE,default=None)
-	edge_apint = models.CharField(max_length=200,default=None)
+	edge_paint = models.CharField(max_length=200,default=None)
 	thread = models.CharField(max_length=200,default=None)
 	sku = models.CharField(max_length=200)
 

@@ -14,3 +14,6 @@ def client_detail(request, client_id):
 	client = get_object_or_404(Client, pk=client_id)
 	return render(request,'fichas/client_detail.html',{'client':client})
 
+def ficha_detail(request, ficha_id):
+	ficha = get_object_or_404(Ficha, pk=ficha_id)
+	return render(request,'fichas/ficha_detail.html',{'ficha':ficha})

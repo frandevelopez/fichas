@@ -1,8 +1,10 @@
 <h1>{{ client.name }}</h1>
+
+
 <ul>
 	{% if client.ficha_set %}
 		{% for f in client.ficha_set.all %}
-	 		<li>{{ f.name }}: {{ f.price }}€</li>
+	 		<li><a href="{% url 'fichas:ficha_detail' f.id%}">{{ f.name }}</a>: {{ f.price }}€</li>
 	 	{% endfor %}
 	{% else %} <h6>No fichas in this client<h6>
 	{% endif %}
