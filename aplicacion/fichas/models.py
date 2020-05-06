@@ -13,7 +13,6 @@ class Client(models.Model):
 	name = models.CharField(max_length=200)
 	country = models.CharField(max_length=200)
 	creation_date = models.DateTimeField('date published', default=timezone.now())
-
 	def __str__(self):
 		return self.name
 

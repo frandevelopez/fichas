@@ -8,3 +8,12 @@
 {% else %}
     <p>No clients are available.</p>
 {% endif %}
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'fichas:client_post' %}" method="post">
+{% csrf_token %}
+    <input type="text" name="name">
+    <input type="text" name="country">
+<input type="submit" value="Add">
+</form>
