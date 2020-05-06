@@ -28,4 +28,4 @@ def client_post(request):
 		client.save()
 	except:
 		raise Http404('ni idea chacho')	
-	return HttpResponseRedirect(reverse('fichas:index'))
+	return HttpResponseRedirect(reverse('fichas:client_detail', args=(client.id,)))
